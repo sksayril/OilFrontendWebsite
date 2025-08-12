@@ -119,11 +119,13 @@ const AboutUs = () => {
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <img 
-            src="/src/public/Aboout_Image1.png" 
-            alt="From Our Hands For Your Home" 
+            src="https://i.pinimg.com/736x/bd/74/96/bd749685c6d2b88bc8ccdd84ab91be90.jpg" 
+            alt="Premium Cooking Oils and Kitchen Essentials - From Our Hands For Your Home" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+          {/* Enhanced Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
         </motion.div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -131,8 +133,21 @@ const AboutUs = () => {
             className="text-left"
             variants={heroTextVariants}
           >
+            {/* Premium Badge */}
+            <motion.div 
+              className="inline-block bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-xl"
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              style={{
+                boxShadow: "0 10px 25px rgba(245, 158, 11, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)"
+              }}
+            >
+              🌟 Premium Quality Since 1995
+            </motion.div>
+            
             <motion.h1 
-              className="text-6xl lg:text-8xl font-black text-orange-600 leading-tight mb-8"
+              className="text-6xl lg:text-8xl font-black text-white leading-tight mb-8 drop-shadow-2xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2, delay: 0.8 }}
@@ -141,12 +156,13 @@ const AboutUs = () => {
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1, duration: 0.8 }}
+                className="text-orange-300"
               >
                 FROM OUR
               </motion.span>
               <br/>
               <motion.span 
-                className="text-orange-500"
+                className="text-orange-200"
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
@@ -155,7 +171,7 @@ const AboutUs = () => {
               </motion.span>
               <br/>
               <motion.span 
-                className="text-orange-700"
+                className="text-yellow-200"
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.4, duration: 0.8 }}
@@ -164,7 +180,7 @@ const AboutUs = () => {
               </motion.span>
               <br/>
               <motion.span 
-                className="text-orange-600"
+                className="text-white"
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.6, duration: 0.8 }}
@@ -172,6 +188,29 @@ const AboutUs = () => {
                 HOME
               </motion.span>
             </motion.h1>
+            
+            {/* Enhanced Description */}
+            <motion.p 
+              className="text-xl text-gray-200 max-w-2xl mb-8 leading-relaxed drop-shadow-lg"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.8, duration: 0.8 }}
+            >
+              Experience the authentic taste of traditional India with our premium cooking oils. 
+              Every drop is crafted with care, ensuring the highest quality and natural goodness 
+              for your family's health and well-being.
+            </motion.p>
+            
+            {/* Premium CTA Button */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 2.0, duration: 0.8 }}
+            >
+              <button className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-8 py-4 rounded-2xl text-lg font-bold hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1">
+                Discover Our Story →
+              </button>
+            </motion.div>
           </motion.div>
           
           <div className="flex justify-center lg:justify-end">
@@ -179,18 +218,72 @@ const AboutUs = () => {
               className="relative"
               variants={logoVariants}
             >
-              <motion.img 
-                src="/src/public/doctorlogo.png" 
-                alt="Doctor's Choice Logo" 
-                className="w-32 h-24 object-contain mb-4"
+              {/* Enhanced Logo Container */}
+              <motion.div 
+                className="bg-white/20 backdrop-blur-md rounded-3xl p-6 border border-white/30 shadow-2xl"
                 whileHover={{ 
-                  scale: 1.1, 
-                  rotate: 5,
-                  transition: { type: "spring", stiffness: 300 }
+                  scale: 1.05,
+                  boxShadow: "0 25px 50px rgba(0, 0, 0, 0.3)"
                 }}
-              />
+                transition={{ type: "spring", stiffness: 300 }}
+                style={{
+                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)"
+                }}
+              >
+                <motion.img 
+                  src="/src/public/logo.png" 
+                  alt="Doctor's Choice Logo" 
+                  className="w-32 h-24 object-contain"
+                  whileHover={{ 
+                    scale: 1.1, 
+                    rotate: 5,
+                    transition: { type: "spring", stiffness: 300 }
+                  }}
+                />
+                <div className="text-center mt-3">
+                  <div className="text-white text-sm font-semibold">MY CHOICE®</div>
+                  <div className="text-orange-200 text-xs">Premium Quality</div>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
+        </div>
+        
+        {/* Premium Floating Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <motion.div 
+            className="absolute top-1/4 left-10 w-3 h-3 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-full shadow-lg"
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.6, 1, 0.6],
+              scale: [1, 1.2, 1]
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            style={{
+              boxShadow: "0 8px 25px rgba(251, 191, 36, 0.4)"
+            }}
+          />
+          <motion.div 
+            className="absolute bottom-1/4 right-10 w-3 h-3 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full shadow-lg"
+            animate={{
+              y: [0, -15, 0],
+              opacity: [0.7, 1, 0.7],
+              scale: [1, 1.1, 1]
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              delay: 1,
+              ease: "easeInOut"
+            }}
+            style={{
+              boxShadow: "0 6px 20px rgba(251, 191, 36, 0.3)"
+            }}
+          />
         </div>
       </section>
 

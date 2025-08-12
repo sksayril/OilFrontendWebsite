@@ -86,7 +86,7 @@ const Footer = () => {
               transition={{ type: "spring" as const, stiffness: 300 }}
             >
               <img 
-                src="/src/public/doctorlogo.png" 
+                src="/src/public/logo.png" 
                 alt="Doctor's Choice Logo" 
                 className="w-32 h-auto mb-4"
               />
@@ -110,7 +110,7 @@ const Footer = () => {
                   <span className="text-white text-xs font-bold">✓</span>
                 </motion.div>
                 <p className="text-gray-800 text-xs leading-relaxed">
-                  Doctors' Choice is only a brand name or trademark and does not represent its true nature.
+                  MY CHOICE is only a brand name or trademark and does not represent its true nature.
                 </p>
               </div>
             </motion.div>

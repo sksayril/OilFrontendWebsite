@@ -92,7 +92,7 @@ const RefinedSunflowerOil = () => {
               <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
                 <span className="text-black font-bold text-sm">CHOICE®</span>
               </div>
-              <h1 className="text-2xl font-bold text-gray-800">Doctors' Choice</h1>
+              <h1 className="text-2xl font-bold text-gray-800">MY CHOICE</h1>
             </div>
             <Link to="/products" className="text-blue-600 hover:text-blue-800 font-medium">
               ← Back to Products
@@ -123,7 +123,7 @@ const RefinedSunflowerOil = () => {
                 <span className="text-yellow-600">SUNFLOWER OIL</span>
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Experience the light and healthy goodness of Doctors' Choice Refined Sunflower Oil, your perfect 
+                Experience the light and healthy goodness of MY CHOICE Refined Sunflower Oil, your perfect 
                 companion for everyday cooking. This premium oil is extracted from carefully selected sunflower 
                 seeds and refined to perfection, offering a clean, neutral flavor that enhances rather than 
                 overpowers your dishes. Rich in Vitamin E and heart-healthy unsaturated fats, it's the ideal 
@@ -164,41 +164,170 @@ const RefinedSunflowerOil = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="relative z-10">
-              {/* Main Product Pouch */}
-              <div className="w-64 h-80 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg relative mx-auto mb-4">
-                <div className="absolute inset-0 bg-white rounded-lg m-2 p-4">
-                  <div className="text-center">
-                    <div className="text-sm font-bold text-yellow-600 mb-2">DOCTORS' CHOICE</div>
-                    <div className="text-xs text-gray-600 mb-2">REFINED SUNFLOWER OIL</div>
-                    <div className="flex justify-center space-x-2 mb-2">
-                      <div className="w-6 h-6 bg-green-500 text-white text-xs flex items-center justify-center rounded">
-                        A,D&E
-                      </div>
-                      <div className="w-8 h-6 bg-blue-500 text-white text-xs flex items-center justify-center rounded">
-                        Vit E
-                      </div>
-                    </div>
+              {/* Main Sunflower Image */}
+              <motion.div 
+                className="relative w-96 h-96 mx-auto mb-6"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <img 
+                  src="/src/public/refined-sunflower-oil.jpeg" 
+                  alt="Beautiful Sunflower with Golden Oil Splash" 
+                  className="w-full h-full object-cover rounded-3xl shadow-2xl"
+                  style={{
+                    boxShadow: "0 25px 50px -12px rgba(251, 191, 36, 0.3), 0 0 0 1px rgba(251, 191, 36, 0.1)"
+                  }}
+                />
+                
+                {/* Premium Overlay Elements */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent rounded-3xl"></div>
+                
+                {/* Floating Oil Drops */}
+                <motion.div 
+                  className="absolute top-8 left-8 w-3 h-3 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full shadow-lg"
+                  animate={{
+                    y: [0, -15, 0],
+                    opacity: [0.7, 1, 0.7],
+                    scale: [1, 1.2, 1]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  style={{
+                    boxShadow: "0 8px 25px rgba(251, 191, 36, 0.4)"
+                  }}
+                />
+                
+                <motion.div 
+                  className="absolute top-16 right-12 w-2 h-2 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full shadow-lg"
+                  animate={{
+                    y: [0, -12, 0],
+                    opacity: [0.6, 1, 0.6],
+                    scale: [1, 1.1, 1]
+                  }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    delay: 0.5,
+                    ease: "easeInOut"
+                  }}
+                  style={{
+                    boxShadow: "0 6px 20px rgba(251, 191, 36, 0.3)"
+                  }}
+                />
+                
+                <motion.div 
+                  className="absolute bottom-16 left-16 w-2.5 h-2.5 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full shadow-lg"
+                  animate={{
+                    y: [0, -18, 0],
+                    opacity: [0.5, 1, 0.5],
+                    scale: [1, 1.15, 1]
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    delay: 1,
+                    ease: "easeInOut"
+                  }}
+                  style={{
+                    boxShadow: "0 10px 30px rgba(251, 191, 36, 0.35)"
+                  }}
+                />
+              </motion.div>
+              
+              {/* Product Badge */}
+              <motion.div 
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-4 text-white text-center shadow-xl mx-auto max-w-xs"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 1.0 }}
+                style={{
+                  boxShadow: "0 20px 40px -10px rgba(251, 191, 36, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)"
+                }}
+              >
+                <div className="text-sm font-bold mb-1">MY CHOICE®</div>
+                <div className="text-xs opacity-90">Premium Refined Sunflower Oil</div>
+                <div className="flex justify-center space-x-2 mt-2">
+                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs">🌻</span>
+                  </div>
+                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs">☀️</span>
+                  </div>
+                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs">💚</span>
                   </div>
                 </div>
-              </div>
-              
-              {/* Sunflower Elements */}
-              <div className="flex justify-center space-x-4">
-                <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                  <span className="text-xs text-center text-yellow-800">🌻</span>
-                </div>
-                <div className="w-20 h-16 bg-orange-300 rounded-lg flex items-center justify-center">
-                  <span className="text-xs text-center text-orange-800">☀️</span>
-                </div>
-              </div>
+              </motion.div>
             </div>
             
-            {/* Decorative elements */}
+            {/* Enhanced Decorative Elements */}
             <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute top-10 left-10 w-3 h-3 bg-yellow-400 rounded-full"></div>
-              <div className="absolute top-20 right-20 w-2 h-2 bg-orange-400 rounded-full"></div>
-              <div className="absolute bottom-20 left-20 w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
-              <div className="absolute bottom-10 right-10 w-3 h-3 bg-orange-400 rounded-full"></div>
+              <motion.div 
+                className="absolute top-10 left-10 w-3 h-3 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full shadow-lg"
+                animate={{
+                  scale: [1, 1.3, 1],
+                  opacity: [0.6, 1, 0.6]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                style={{
+                  boxShadow: "0 8px 25px rgba(251, 191, 36, 0.3)"
+                }}
+              />
+              <motion.div 
+                className="absolute top-20 right-20 w-2 h-2 bg-gradient-to-br from-orange-400 to-red-400 rounded-full shadow-lg"
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  delay: 0.3,
+                  ease: "easeInOut"
+                }}
+                style={{
+                  boxShadow: "0 6px 20px rgba(251, 146, 60, 0.3)"
+                }}
+              />
+              <motion.div 
+                className="absolute bottom-20 left-20 w-2.5 h-2.5 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full shadow-lg"
+                animate={{
+                  scale: [1, 1.25, 1],
+                  opacity: [0.5, 1, 0.5]
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  delay: 0.7,
+                  ease: "easeInOut"
+                }}
+                style={{
+                  boxShadow: "0 10px 30px rgba(251, 191, 36, 0.4)"
+                }}
+              />
+              <motion.div 
+                className="absolute bottom-10 right-10 w-3 h-3 bg-gradient-to-br from-yellow-300 to-orange-400 rounded-full shadow-lg"
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.6, 1, 0.6]
+                }}
+                transition={{
+                  duration: 2.2,
+                  repeat: Infinity,
+                  delay: 1.2,
+                  ease: "easeInOut"
+                }}
+                style={{
+                  boxShadow: "0 8px 25px rgba(251, 191, 36, 0.35)"
+                }}
+              />
             </div>
           </motion.div>
         </motion.div>

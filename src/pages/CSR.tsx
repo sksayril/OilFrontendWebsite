@@ -206,30 +206,47 @@ const CSR = () => {
                 scale: 1.02
               }}
             >
-              {/* School Buildings Image */}
-              <div className="relative h-80 bg-gradient-to-br from-blue-100 to-blue-200 overflow-hidden">
-                <div className="absolute inset-0 flex items-end justify-center">
-                  {/* School Buildings */}
-                  <div className="flex space-x-4 mb-8">
-                    {Array.from({length: 3}).map((_, i) => (
-                      <div key={i} className="w-16 h-20 bg-white rounded-lg shadow-lg relative">
-                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-3 bg-gray-300 rounded-t-sm"></div>
-                        <div className="absolute inset-2 bg-blue-100 rounded-md"></div>
-                        <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-blue-300 rounded-sm"></div>
-                        <div className="absolute top-3 right-1/2 transform translate-x-1/2 w-3 h-3 bg-blue-300 rounded-sm"></div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              {/* School Image */}
+              <div className="relative h-80 overflow-hidden">
+                <motion.img 
+                  src="/src/public/school.jpg" 
+                  alt="School Community - Ekal Vidyalayas across 24 Parganas" 
+                  className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.6 }}
+                />
+                {/* Premium Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                 
-                {/* Ground and Benches */}
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-amber-800">
-                  <div className="flex justify-center space-x-8 pt-4">
-                    {Array.from({length: 4}).map((_, i) => (
-                      <div key={i} className="w-12 h-2 bg-amber-600 rounded-full"></div>
-                    ))}
-                  </div>
-                </div>
+                {/* Premium Badge */}
+                <motion.div 
+                  className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-xl"
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                  style={{
+                    boxShadow: "0 8px 25px rgba(37, 99, 235, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)"
+                  }}
+                >
+                  🏫 Education
+                </motion.div>
+                
+                {/* Floating Elements */}
+                <motion.div 
+                  className="absolute top-6 right-6 w-3 h-3 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full shadow-lg"
+                  animate={{
+                    scale: [1, 1.3, 1],
+                    opacity: [0.7, 1, 0.7]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  style={{
+                    boxShadow: "0 6px 20px rgba(251, 191, 36, 0.4)"
+                  }}
+                />
               </div>
               
               {/* Content */}
@@ -244,7 +261,20 @@ const CSR = () => {
                   Building classrooms and toilet blocks at Sarati B.M.M. Primary School, Mayapur, Hooghly. 
                   Creating accessible education infrastructure for rural communities.
                 </p>
+                
+                {/* Enhanced Stats */}
+                <div className="mt-6 flex items-center space-x-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <span className="text-sm text-gray-600">24 Districts</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="text-sm text-gray-600">50+ Schools</span>
+                  </div>
+                </div>
               </div>
+              
             </motion.div>
 
             {/* Right Card - Primary School Construction */}
@@ -256,39 +286,67 @@ const CSR = () => {
                 scale: 1.02
               }}
             >
-              {/* Children and School Image */}
-              <div className="relative h-80 bg-gradient-to-br from-green-100 to-green-200 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  {/* Children around table */}
-                  <div className="relative">
-                    {/* Table */}
-                    <div className="w-48 h-8 bg-amber-700 rounded-lg shadow-lg"></div>
-                    
-                    {/* Children */}
-                    {Array.from({length: 6}).map((_, i) => (
-                      <div 
-                        key={i}
-                        className="absolute w-8 h-8 bg-blue-400 rounded-full"
-                        style={{
-                          left: `${20 + (i % 3) * 30}%`,
-                          top: `${20 + Math.floor(i / 3) * 40}%`
-                        }}
-                      ></div>
-                    ))}
-                    
-                    {/* Food plates */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <div className="w-16 h-4 bg-yellow-300 rounded-full"></div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* School building in background */}
-                <div className="absolute bottom-4 right-4 w-24 h-16 bg-blue-300 rounded-lg">
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-2 bg-blue-400 rounded-t-sm"></div>
-                  <div className="absolute inset-2 bg-blue-200 rounded-md"></div>
-                </div>
-              </div>
+                             {/* Children and School Image */}
+               <div className="relative h-80 overflow-hidden">
+                 <motion.img 
+                   src="/src/public/school2.jpg" 
+                   alt="Young Students - Laying the Foundation for Young Futures" 
+                   className="w-full h-full object-cover"
+                   whileHover={{ scale: 1.05 }}
+                   transition={{ duration: 0.6 }}
+                 />
+                 {/* Premium Overlay */}
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                 
+                 {/* Premium Badge */}
+                 <motion.div 
+                   className="absolute top-4 left-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-xl"
+                   initial={{ x: -20, opacity: 0 }}
+                   animate={{ x: 0, opacity: 1 }}
+                   transition={{ delay: 0.5, duration: 0.6 }}
+                   style={{
+                     boxShadow: "0 8px 25px rgba(239, 68, 68, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)"
+                   }}
+                 >
+                   🌟 Young Futures
+                 </motion.div>
+                 
+                 {/* Floating Elements */}
+                 <motion.div 
+                   className="absolute top-6 right-6 w-3 h-3 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full shadow-lg"
+                   animate={{
+                     scale: [1, 1.3, 1],
+                     opacity: [0.7, 1, 0.7]
+                   }}
+                   transition={{
+                     duration: 2,
+                     repeat: Infinity,
+                     ease: "easeInOut"
+                   }}
+                   style={{
+                     boxShadow: "0 6px 20px rgba(251, 191, 36, 0.4)"
+                   }}
+                 />
+                 
+                 {/* Additional Floating Element */}
+                 <motion.div 
+                   className="absolute bottom-6 left-6 w-2 h-2 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full shadow-lg"
+                   animate={{
+                     scale: [1, 1.5, 1],
+                     opacity: [0.6, 1, 0.6],
+                     y: [0, -8, 0]
+                   }}
+                   transition={{
+                     duration: 2.5,
+                     repeat: Infinity,
+                     ease: "easeInOut",
+                     delay: 0.5
+                   }}
+                   style={{
+                     boxShadow: "0 4px 15px rgba(59, 130, 246, 0.4)"
+                   }}
+                 />
+               </div>
               
               {/* Content */}
               <div className="p-8">
