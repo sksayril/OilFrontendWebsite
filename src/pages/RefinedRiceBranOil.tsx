@@ -162,7 +162,7 @@ const RefinedRiceBranOil = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <img 
-                  src="/src/public/rice oil.jpg" 
+                  src="/rice oil.jpg" 
                   alt="Premium Rice Oil in Glass Pitcher with Rice Grains and Stalks" 
                   className="w-full h-full object-cover rounded-3xl shadow-2xl"
                   style={{

@@ -231,7 +231,7 @@ const AboutUs = () => {
                 }}
               >
                 <motion.img 
-                  src="/src/public/logo.png" 
+                  src="/logo.png" 
                   alt="Doctor's Choice Logo" 
                   className="w-32 h-24 object-contain"
                   whileHover={{ 
@@ -353,7 +353,7 @@ const AboutUs = () => {
               viewport={{ once: true }}
             >
               <motion.img 
-                src="/src/public/About_image2.png" 
+                src="/About_image2.png" 
                 alt="Production Facility" 
                 className="w-full h-96 object-cover rounded-3xl shadow-2xl"
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
@@ -477,7 +477,7 @@ const AboutUs = () => {
               viewport={{ once: true }}
             >
               <motion.img 
-                src="/src/public/About_image3.png" 
+                src="/About_image3.png" 
                 alt="The Goodness We Promise" 
                 className="w-full h-96 object-cover rounded-3xl shadow-2xl"
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}

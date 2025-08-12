@@ -172,7 +172,7 @@ const ProductCards = () => {
                       }}
                     >
                       <img 
-                        src="/src/public/doctorlogo.png" 
+                        src="/doctorlogo.png" 
                         alt="Doctor's Choice" 
                         className="w-8 h-6 object-contain"
                       />

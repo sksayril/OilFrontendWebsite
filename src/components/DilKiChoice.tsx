@@ -37,7 +37,7 @@ const DilKiChoice = () => {
       <div className="absolute inset-0 w-full h-full">
         <div>
         <video 
-          src="/src/public/home_1.mp4"
+          src="/home_1.mp4"
           autoPlay
           loop
           muted

@@ -191,7 +191,7 @@ const RefinedSoyabeanOil = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-amber-400/20 rounded-[3rem] blur-xl"></div>
                 <img 
-                  src="/src/public/soybean-oil-soybean-food-beverage-products-food-nutrition-concept.jpg" 
+                  src="/soybean-oil-soybean-food-beverage-products-food-nutrition-concept.jpg" 
                   alt="Premium Soybean Oil Being Poured with Soybeans Scattered Around" 
                   className="w-full h-full object-cover rounded-[3rem] shadow-2xl relative z-10"
                   style={{

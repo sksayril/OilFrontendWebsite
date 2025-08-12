@@ -171,7 +171,7 @@ const RefinedSunflowerOil = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <img 
-                  src="/src/public/refined-sunflower-oil.jpeg" 
+                  src="/refined-sunflower-oil.jpeg" 
                   alt="Beautiful Sunflower with Golden Oil Splash" 
                   className="w-full h-full object-cover rounded-3xl shadow-2xl"
                   style={{

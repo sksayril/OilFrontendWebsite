@@ -86,7 +86,7 @@ const Footer = () => {
               transition={{ type: "spring" as const, stiffness: 300 }}
             >
               <img 
-                src="/src/public/logo.png" 
+                src="/logo.png" 
                 alt="Doctor's Choice Logo" 
                 className="w-32 h-auto mb-4"
               />

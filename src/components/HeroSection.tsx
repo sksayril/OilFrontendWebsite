@@ -70,7 +70,7 @@ const HeroSection = () => {
       >
         {/* Oil Pouring Video Background */}
         <video 
-          src="/src/public/home.mp4"
+          src="/home.mp4"
           autoPlay
           loop
           muted

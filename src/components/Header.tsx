@@ -333,7 +333,7 @@ const Header = () => {
                 {/* Logo Container */}
                 <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-xl relative z-10 border border-gray-200">
                   <img 
-                    src="/src/public/logo.png" 
+                    src="/logo.png" 
                     alt="Doctor's Choice Logo" 
                     className="w-24 h-20 object-contain drop-shadow-lg"
                   />

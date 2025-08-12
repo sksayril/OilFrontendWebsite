@@ -152,7 +152,7 @@ const RefinedMustardOil = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <img 
-                  src="/src/public/mustard.jpg" 
+                  src="/mustard.jpg" 
                   alt="Premium Mustard Oil in Glass Jar with Mustard Seeds" 
                   className="w-full h-full object-cover rounded-3xl shadow-2xl"
                   style={{

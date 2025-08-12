@@ -54,7 +54,7 @@ const CSR = () => {
          {/* Background Image */}
          <div className="absolute inset-0">
            <img 
-             src="/src/public/csr-banner.png" 
+             src="/csr-banner.png" 
              alt="CSR Banner Background" 
              className="w-full h-full object-cover"
            />
@@ -209,7 +209,7 @@ const CSR = () => {
               {/* School Image */}
               <div className="relative h-80 overflow-hidden">
                 <motion.img 
-                  src="/src/public/school.jpg" 
+                  src="/school.jpg" 
                   alt="School Community - Ekal Vidyalayas across 24 Parganas" 
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.05 }}
@@ -289,7 +289,7 @@ const CSR = () => {
                              {/* Children and School Image */}
                <div className="relative h-80 overflow-hidden">
                  <motion.img 
-                   src="/src/public/school2.jpg" 
+                   src="/school2.jpg" 
                    alt="Young Students - Laying the Foundation for Young Futures" 
                    className="w-full h-full object-cover"
                    whileHover={{ scale: 1.05 }}
